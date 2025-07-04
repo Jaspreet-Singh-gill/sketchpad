@@ -10,6 +10,7 @@ middle.appendChild(middleRight);
 middleRight = document.querySelector(".middleRight");
 
 
+
 submit.addEventListener("click",function(){
     middle.removeChild(middleRight);
     let val = inputForm.value;
@@ -22,8 +23,11 @@ submit.addEventListener("click",function(){
     for(let i =1;i <= val*val;i++){
         
         let div = document.createElement("div");
-        div.style.cssText = `width:${hightBox}px;height:${hightBox}px;border:1px solid black;
+        div.style.cssText = `width:${hightBox}px;height:${hightBox}px;border:1px solid white;
                             box-sizing:border-box;`;
+        div.addEventListener("mousemove",function(){
+            div.style.backgroundColor = "red";
+        });
         div.classList.add("divHover");
         middleRight.appendChild(div);
 
@@ -31,12 +35,12 @@ submit.addEventListener("click",function(){
     }
 
     middle.appendChild(middleRight);
+    
 
 });
 
-let divHover = document.querySelector(".divHover");
-divHover.addEventListener("mousemove",function(e){
-  
-    divHover.style.color = "black";
 
-});
+
+let eve =new Event("click");
+submit.dispatchEvent(eve);
+
