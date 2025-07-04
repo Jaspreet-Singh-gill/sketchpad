@@ -2,27 +2,41 @@
 
 const submit = document.querySelector("#submit");
 const inputForm = document.querySelector("input");
-const middleRight = document.querySelector(".middleRight");
+let middleRight = document.createElement("div");
+middleRight.classList.add("middleRight");
 inputForm.value ="16";
 const middle = document.querySelector(".middle");
+middle.appendChild(middleRight);
+middleRight = document.querySelector(".middleRight");
 
 
 submit.addEventListener("click",function(){
-    doc.removeChild(middleRight);
+    middle.removeChild(middleRight);
     let val = inputForm.value;
     val = parseInt(val);
     let hightBox = 500/val;
-    let temp = document.createElement("div");
-    temp.classList.add("middleRight");
+    // let temp = document.createElement("div");
+    // temp.classList.add("middleRight");
+    middleRight = document.createElement("div");
+    middleRight.classList.add("middleRight");
     for(let i =1;i <= val*val;i++){
         
         let div = document.createElement("div");
         div.style.cssText = `width:${hightBox}px;height:${hightBox}px;border:1px solid black;
                             box-sizing:border-box;`;
-        temp.appendChild(div);
+        div.classList.add("divHover");
+        middleRight.appendChild(div);
+
 
     }
 
-    middle.appendChild(temp);
+    middle.appendChild(middleRight);
+
+});
+
+let divHover = document.querySelector(".divHover");
+divHover.addEventListener("mousemove",function(e){
+  
+    divHover.style.color = "black";
 
 });
