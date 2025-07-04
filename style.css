@@ -1,0 +1,103 @@
+body{
+    margin:0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
+.headingText{
+    font-size: 34px;
+    color:white;
+    font-weight: bold;
+    padding: 15px 0px;
+    font-family: "Courier New",serif;
+}
+
+.middle{
+    display:flex;
+    margin:8px;
+    border:3px solid blueviolet;
+    border-radius: 20px;
+    padding:20px;
+    justify-content: space-between;
+    min-width: 750px;
+    
+}
+
+.middle .middleLeft{
+    display:flex;
+    border:3px solid blueviolet;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: blueviolet;
+    max-width: 300px;
+    height: 500px;
+    flex:1;
+
+
+
+
+}
+
+#inputText{
+    font-size: 24px;
+    color:white;
+    font-family: "Lucida HandWriting",serif;
+    font-weight: bold;
+    padding :8px;
+
+}
+
+#inputContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    height: 100px;
+
+}
+
+#inputForm input{
+    font-size: 24px;
+    color:blueviolet;
+    font-weight: bold;
+    border:2px solid white;
+    font-family: "Lucida HandWriting",serif;
+    width:120px;
+    margin:8px;
+    border-radius: 20px;
+    
+
+
+
+}
+
+
+#submitButton button{
+    width:80px;
+    height: 35px;
+    background-color: white;
+    border:2px solid white;
+    border-radius: 20px;
+    font-family:  "Courier New",serif;
+    color:blueviolet ;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+
+.middleRight{
+    display: flex;
+    border:3px solid blueviolet ;
+    /* border-radius: 20px; */
+    aspect-ratio: 1/1;
+    margin:0px 40px;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+
+}
