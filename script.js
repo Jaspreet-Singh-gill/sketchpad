@@ -14,6 +14,10 @@ middleRight = document.querySelector(".middleRight");
 submit.addEventListener("click",function(){
     middle.removeChild(middleRight);
     let val = inputForm.value;
+    if(val > 130){
+        val =16;
+        alert("Sorry but the grid side is limited to 130 boxes per row\nSo default 16 has been seted now");
+    }
     val = parseInt(val);
     let hightBox = 500/val;
     // let temp = document.createElement("div");
@@ -25,8 +29,11 @@ submit.addEventListener("click",function(){
         let div = document.createElement("div");
         div.style.cssText = `width:${hightBox}px;height:${hightBox}px;border:1px solid white;
                             box-sizing:border-box;`;
+        
         div.addEventListener("mousemove",function(){
-            div.style.backgroundColor = "red";
+            let colorBox = document.querySelector("#cInput input");
+
+            div.style.backgroundColor = colorBox.value;
         });
         div.classList.add("divHover");
         middleRight.appendChild(div);

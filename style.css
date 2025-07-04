@@ -2,13 +2,17 @@ body{
     margin:0;
 }
 
-.header{
+.header,
+.footer{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: blueviolet;
+    flex:1;
+    min-width: 810px;
 }
-.headingText{
+.headingText,
+.footer{
     font-size: 34px;
     color:white;
     font-weight: bold;
@@ -36,13 +40,17 @@ body{
     max-width: 300px;
     height: 500px;
     flex:1;
+    gap:30px;
 
 
 
 
 }
 
-#inputText{
+
+
+#inputText,
+#cText{
     font-size: 24px;
     color:white;
     font-family: "Lucida HandWriting",serif;
@@ -99,5 +107,28 @@ body{
     width: 500px;
     height: 500px;
     flex-wrap: wrap;
+
+}
+
+
+.footer{
+    flex-direction: column;
+    font-size: 18px;
+}
+
+
+.colorPicker{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#cInput input{
+    margin :8px;
+    width:130px;
+    height: 35px;
+    border:2px solid white;
+    border-radius: 20px;
 
 }
